@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <p class="tag">FULL STACK PROJECT</p>
+            <h1>Student Management System</h1>
+            <p class="subtitle">Manage student records through a simple web dashboard.</p>
+        </header>
+
+        <section class="card">
+            <h2>Add Student</h2>
+            <form id="studentForm">
+                <div class="grid">
+                    <input id="name" type="text" placeholder="Student name" required>
+                    <input id="email" type="email" placeholder="Email" required>
+                    <input id="course" type="text" placeholder="Course (e.g. MCA)" required>
+                    <select id="year" required>
+                        <option value="">Select year</option>
+                        <option value="1">1st Year</option>
+                        <option value="2">2nd Year</option>
+                        <option value="3">3rd Year</option>
+                        <option value="4">4th Year</option>
+                    </select>
+                </div>
+                <button type="submit">Add Student</button>
+            </form>
+            <p id="message" class="message"></p>
+        </section>
+
+        <section class="card">
+            <div class="section-head">
+                <h2>Students</h2>
+                <input id="search" type="search" placeholder="Search by name, email or course">
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Course</th>
+                            <th>Year</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentTable"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
